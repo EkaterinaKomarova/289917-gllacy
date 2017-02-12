@@ -1,7 +1,3 @@
-/*body, p, ul, h2 {
-	margin: 0;
-	padding: 0;
-}*/
 a {
 	text-decoration: none;
 	color: inherit;
@@ -16,7 +12,7 @@ body {
 }
 h1 {
 	font-size: 60px;
-	line-height: 60.35px;
+	line-height: 64px;
 	color: #ffffff;
 	font-weight: 700;
 	text-align: center;
@@ -26,7 +22,7 @@ h2 {
 	line-height: 41px;
 	color: #ffffff;
 	font-weight: 700;
-	padding-bottom: 28px;
+	padding-bottom: 15px;
 }
 h3 {
 	font-size: 24px;
@@ -48,7 +44,7 @@ h3 {
 	margin-top: 9px;
 }
 .main-menu {
-	margin-top: 26px;
+	margin-top: 28px;
 	width: 710px;
 	float: left;
 }
@@ -60,6 +56,48 @@ h3 {
 	display: inline-block;
 	margin-left: 26px;
 	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.main-menu li:hover > ul {
+	display: block;
+}
+.main-menu .active {
+	background-color: #d07058;
+	border-radius: 20px;
+	padding: 5px 15px;
+	margin-left: 10px;
+}
+.sub-menu {
+	display: none;
+	position: absolute;
+	list-style: none;
+	color: #323232;
+	background: #ffffff;
+	margin-top: 5px;
+	border-radius: 5px;
+}
+.sub-menu li {
+	margin: 0;
+	display: block;
+	padding: 10px 20px;
+}
+.sub-menu li:not(:first-child):hover {
+	background-color: #fbded7;
+}
+.sub-menu-caption a {
+	cursor: default;
+}
+.sub-menu-caption {
+	font-weight: 700;
+	position: relative;
+}
+.sub-menu-caption::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 12px;
+	width: 128px;
+	height: 2px;
+	background-color: #d1d0ce;
 }
 .user {
 	font-size: 14px;
@@ -124,6 +162,9 @@ h3 {
 	background: url(../img/Sprite_User.png) no-repeat;
 	background-position: -97px -15px;
 }
+.add {
+	padding: 7px 19px 7px 40px;
+}
 .contacts {
 	text-align: right;
 }
@@ -169,7 +210,7 @@ h3 {
 }
 .slider a {
 	display: block;
-	width: 280px;
+	width: 235px;
 	margin: 0 auto;
 	text-align: center;
 	margin-bottom: 40px;
@@ -206,41 +247,203 @@ body > input[type="radio"] {
 .slider-controls {
 	position: absolute;
 	bottom: 25px;
-	left: 0;
+	left: 2px;
+	bottom: 20px;
 }
 .slider-controls label {
 	display: inline-block;
 	width: 17px;
 	height: 17px;
-	margin-right: 8px;
+	margin-right: 4px;
 	vertical-align: top;
 	background-color: transparent;
 	border: 2px solid #ffffff;
 	border-radius: 50%;
 	cursor: pointer;
 }
-.breadcrumbs li {
-	display: inline-block;
-	border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-.breadcrumbs li:last-child {
-	border-bottom: none;
-}
-.filters {
-	margin-bottom: 40px;
+.slider .btn {
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: 700;
 }
 .btn {
-	padding: 10px 17px;
+	padding: 10px 22px;
 	background: linear-gradient(to top, #e74a35, #f26843);
 	border-radius: 90px;
 	box-shadow: 2px 2px 2px rgba(172,16,0,0.64);
 	color: #ffffff;
 	font-weight: 700;
 }
-.slider .btn {
-	font-size: 32px;
-	line-height: 44px;
-	font-weight: 700;
+.breadcrumbs {
+	margin-top: -22px;
+}
+.breadcrumbs ul {
+	margin: 0;
+	padding: 0;
+}
+.breadcrumbs li {
+	position: relative;
+	display: inline-block;
+	padding-right: 10px;
+}
+.breadcrumbs li a {
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.breadcrumbs li:not(:first-child)::after {
+	content: "»";
+	position: absolute;
+	top: 0;
+	left: -13px;
+}
+.filters {
+	margin-bottom: 40px;
+	width: 879px;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+.filters label {
+	font-size: 14px;
+	line-height: 16px;
+}
+.filters input + label {
+	font-size: 16px;
+	line-height: 18px;
+}
+.filter-controls select {
+	margin-top: 5px;
+	margin-bottom: 15px;
+	padding: 7px 30px 7px 10px;
+	background-color: rgba(255,255,255,0.3);
+	border-radius: 20px;
+	color: #ffffff;
+	cursor: pointer;
+}
+.filter-sort label {
+	margin-left: 18px;
+}
+.filter-price label {
+	margin-left: 29px;
+}
+/*
+.filter-price .filter-controls {
+    position: relative;
+    height: 80px;
+    padding: 0 30px;
+    overflow: hidden;
+}
+.scale {
+    margin-top: 22px;
+    width: 188px;
+    height: 4px;
+    background: #d1dad3;
+}
+.bar {
+    height: 4px;
+    background: #ffffff;
+}
+.toggle {
+    position: absolute;
+    top: 13px;
+    left: 30px;
+    width: 4px;
+    height: 4px;
+    border: 8px solid white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.min-toggle {
+    left: 70px;
+}
+.max-toggle {
+    left: 165px;
+}
+*/
+.filter-price input[type="range"] {
+	margin-top: 5px;
+	margin-bottom: 15px;
+	position: relative;
+	top: 8px;
+	left: 39px;
+}
+.filter-price input[type="range"]::before {
+	content: "";
+	background-color: rgba(255,255,255,0.3);
+	border-radius: 90px;
+	cursor: pointer;
+	width: 220px;
+	height: 36px;
+	position: absolute;
+	top: -8px;
+	left: -24px;
+}
+.filter-fat label:first-child {
+	margin-left: 72px;
+}
+.filter-fat .filter-controls {
+	margin-top: 5px;
+    margin-bottom: 15px;
+    position: relative;
+    top: 0px;
+    left: 58px;
+    background-color: rgba(255,255,255,0.3);
+    padding: 7px 6px 7px 15px;
+    border-radius: 90px;
+}
+.filter-fat .filter-controls input + label {
+	margin-right: 13px;
+}
+.filter-controls input[type="checkbox"],
+.filter-controls input[type="radio"] {
+    display: none;
+}
+.filter-controls label[for] {
+    color: #ffffff;
+    cursor: pointer;
+}
+.filter-controls label[for]::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: top;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+.filter-controls label[for^="fat_"]::before {
+    border-radius: 20px;
+}
+.filter-controls input[type="radio"]:checked + label::before {
+    background: #ffffff;
+    box-shadow: inset 0 0 0 4px #aabcb2;
+}
+.filter-controls input[type="checkbox"]:checked + label::before {
+	background: url(../img/Checked.png) no-repeat;
+}
+.filter-filler .filter-controls {
+	position: relative;
+    top: 1px;
+    left: -3px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 90px;
+    padding: 7px 0 7px 15px;
+}
+.filter-filler .filter-controls input + label {
+	margin-right: 19px;
+}
+.filter-filler label:first-child {
+	margin-left: 18px;
+}
+.filters .btn {
+	background: rgba(255,255,255,0.2);
+	border: 2px solid #ffffff;
+	box-shadow: none;
+	font-weight: 400;
+	cursor: pointer;
+	padding: 7px 29px;
+    margin-top: 23px;
+    margin-left: 9px;
 }
 .stock {
 	display: flex;
@@ -252,12 +455,15 @@ body > input[type="radio"] {
 .stock-item {
 	width: 560px;
 	margin-bottom: 40px;
-	padding: 20px;
+	padding: 18px 22px 24px 22px;
 	box-sizing: border-box;
 	border-radius: 20px;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 700;
 }
 .stock-item p {
-	padding-bottom: 50px;
+	padding-bottom: 45px;
 }
 .raspberry {
 	background-color: #980119;
@@ -275,20 +481,17 @@ body > input[type="radio"] {
 .stock-item .btn {
 	float: right;
 }
-.filters {
-	display: flex;
-	flex-wrap: wrap;
-}
 .catalog-caption {
 	text-align: left;
 	font-size: 35px;
 	line-height: 41px;
+	margin-top: 0px;
 }
 .catalog {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-bottom: 35px;
+	margin-bottom: 15px;
 }
 .catalog-item {
 	width: 267px;
@@ -319,6 +522,10 @@ body > input[type="radio"] {
 	position: relative;
 	top: 3px;
 }
+.kg {
+	font-size: 26px;
+	line-height: 28px;
+}
 .name {
 	text-align: center;
 	padding: 0 10px;
@@ -333,7 +540,7 @@ body > input[type="radio"] {
 	justify-content: space-between;
 	background-color: #ede0c3;
 	border-radius: 15px;
-	padding: 30px 20px;
+	padding: 23px 20px;
 	margin-bottom: 40px;
 	background: url(../img/Wafer_pattern.png) repeat;
 }
@@ -346,7 +553,7 @@ body > input[type="radio"] {
 
 	color: #323232;
 	width: 478px;
-	padding-top: 15px;
+	padding-top: 23px;
 	padding-left: 56px;
 }
 .icon-icecream {
@@ -413,10 +620,10 @@ body > input[type="radio"] {
 	border-radius: 15px;
 	color: #323232;
 	line-height: 30px;
-	padding-top: 26px;
+	padding-top: 19px;
 	padding-left: 20px;
 	box-sizing: border-box;
-	background: url(../img/Strawberry.jpg) no-repeat 20% 40%;
+	background: url(../img/Strawberry.jpg) no-repeat 16% 39%;
 }
 .news p {
 	margin: 0;
@@ -442,8 +649,8 @@ body > input[type="radio"] {
 	background-color: #f8f7f4;
 	border-radius: 15px;
 	position: absolute;
-	top: 5px;
-	left:5px;
+	top: 1px;
+	left: 7px;
 	padding: 32px 22px;
 	box-sizing: border-box;
 }
@@ -454,13 +661,16 @@ body > input[type="radio"] {
 }
 .delivery input {
 	border-radius: 5px;
-	padding: 10px;
+	padding: 11px;
 	border: 1px solid #d3d3d2;
-	width: 360px;
+	width: 345px;
 }
 .delivery button {
 	border-style: none;
 	cursor: pointer;
+	margin-left: 6px;
+    margin-top: -2px;
+    padding: 13px 20px;
 }
 .map {
 	width: 1200px;
@@ -486,7 +696,7 @@ body > input[type="radio"] {
 	line-height: 20px;
 	width: 302px;
 	border-radius: 15px;
-	padding: 34px 27px;
+	padding: 28px;
 	box-sizing: border-box;
 	position: relative;
 	float: right;
@@ -499,21 +709,23 @@ body > input[type="radio"] {
 	margin: 0;
 }
 .address p:nth-child(2) {
-	margin-bottom: 30px;
+	margin-bottom: 18px;
 }
 .address .btn {
 	font-size: 18px;
 	line-height: 24px;
-	margin-top: 30px;
+	margin-top: 26px;
+	padding-left: 27px;
 }
 .bold {
 	font-size: 18px;
-	line-height: 25px;
+	line-height: 26px;
 	font-weight: 700;
 }
 .pagination {
 	display: flex;
 	justify-content: flex-end;
+	margin-top: 70px;
 }
 .pagination li {
 	display: inline-block;
@@ -537,7 +749,7 @@ body > input[type="radio"] {
 	border-radius: 50%;
 }
 .footer-navigation {
-	margin: 36px 204px 29px 180px;
+	margin: 34px 192px 29px 204px;
 }
 .footer-navigation ul {
 	margin: 0;

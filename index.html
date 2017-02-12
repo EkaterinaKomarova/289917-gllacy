@@ -8,11 +8,9 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-
-      <input type="radio" name="switch" id="switch_1" checked>
-      <input type="radio" name="switch" id="switch_2">
-      <input type="radio" name="switch" id="switch_3">
-
+    <input type="radio" name="switch" id="switch_1" checked>
+    <input type="radio" name="switch" id="switch_2">
+    <input type="radio" name="switch" id="switch_3">
     <div class="wrapper">
     	<header class="main-header container">
     	  <div class="logo">
@@ -20,7 +18,16 @@
     	  </div>
     	  <div class="main-menu">
     		 	<ul>
-    		  	<li><a href="#">Каталог</a></li>
+    		  	<li>
+              <a href="./catalog.html">Каталог</a>
+              <ul class="sub-menu">
+                <li class="sub-menu-caption"><a href="#">Новинки</a></li>
+                <li><a href="#">Сливочное</a></li>
+                <li><a href="#">Щербеты</a></li>
+                <li><a href="#">Фруктовый лёд</a></li>
+                <li><a href="#">Мелорин</a></li>
+              </ul>
+            </li>
     		  	<li><a href="#">Доставка и оплата</a></li>
     			 	<li><a href="#">О компании</a></li>
     		  </ul>
@@ -39,7 +46,6 @@
            </p>
         </div>
       </div>
-
       <div class="container">
         <div class="slider">
           <div class="slide" id="slide_1">
@@ -55,16 +61,12 @@
             <a href="#" class="btn">Давайте оба!</a>
           </div>
           <form class="slider-controls">
-            
-              <label for="switch_1"></label>
-            
-              <label for="switch_2"></label>
-            
-              <label for="switch_3"></label>
+            <label for="switch_1"></label>
+            <label for="switch_2"></label>
+            <label for="switch_3"></label>
           </form>
         </div>
       </div>
-
   		<div class="container">
     		<div class="stock">
     			<div class="stock-item raspberry">  				
@@ -83,7 +85,7 @@
             <a href="#">
               <img class="hit" src="img/HIT.png" alt="Хит" width="61px" height="61px">
         			<img src="img/IceCream_item_1.jpg" alt="Изображение товара" width="267px" height="267px">
-        			<p class="price"><span>310</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+        			<p class="price"><span>310</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
         			<p class="name"><a href ="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
             </a>
       		</div>
@@ -91,7 +93,7 @@
             <a href="#">
               <img class="hit" src="img/HIT.png" alt="Хит" width="61px" height="61px">
         			<img src="img/IceCream_item_2.jpg" alt="Изображение товара" width="267px" height="267px">
-        			<p class="price"><span>380</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+        			<p class="price"><span>380</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
         			<p class="name"><a href ="#">Сливочно-кофейное с кусочками шоколада</a></p>
         		</a>
           </div>
@@ -99,7 +101,7 @@
             <a href="#">
         			<img class="hit" src="img/HIT.png" alt="Хит" width="61px" height="61px">
               <img src="img/IceCream_item_3.jpg" alt="Изображение товара" width="267px" height="267px">
-        			<p class="price"><span>355</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+        			<p class="price"><span>355</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
         			<p class="name"><a href ="#">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
         		</a>
           </div>
@@ -107,7 +109,7 @@
             <a href="#">
         			<img class="hit" src="img/HIT.png" alt="Хит" width="61px" height="61px">
               <img src="img/IceCream_item_4.jpg" alt="Изображение товара" width="267px" height="267px">
-        			<p class="price"><span>415</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+        			<p class="price"><span>415</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
         			<p class="name"><a href ="#">Сливочное крем-брюле с карамельной подливкой</a></p>
         		</a>
           </div>
@@ -115,8 +117,8 @@
     		<div class="info">
           <h3>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
     			<p class="icon-icecream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-    			<p class="icon-sheet">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
     			<p class="icon-cow">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+          <p class="icon-sheet">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
     			<p class="icon-thermometer">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
     		</div>
     		<div class="other">

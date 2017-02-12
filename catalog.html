@@ -22,22 +22,22 @@
       <div class="user">
         <a href="#" class="search">Поиск</a>
         <a href="#" class="enter">Вход</a>
-        <a href="#" class="basket">2 товара</a>
+        <a href="#" class="basket add">2 товара</a>
       </div>
     </header>
     <div class="container">
       <div class="contacts">
         <p>
           С 10 до 20, ежедневно<br>
-          8 812 450-25-25
+          <span class="phone">8 812 450-25-25</span>
          </p>
       </div>
     </div>
     <div class="container">
     	<div class="breadcrumbs">
     		<ul>
-    			<li><a href="./index.html">Главная </a></li>
-    			<li><a href="#">Каталог </a></li>
+    			<li><a href="./index.html">Главная</a></li>
+    			<li><a href="#">Каталог</a></li>
     			<li class="active">Сливочное</li>
     		</ul>
     	</div>
@@ -45,28 +45,41 @@
   		<form class="filters" method="get" action="./catalog.html">
 	  		<div class="filter-sort">
 	  			<label for="sort">Сортировка:</label>
-	  			<select id="sort">
-	  				<option>по полулярности</option>
-	  			</select>
+          <div class="filter-controls">
+  	  			<select id="sort" disabled>
+  	  				<option>по полулярности</option>
+  	  			</select>
+          </div>
   			</div>
   			<div class="filter-price">
   				<label for="price">Цена: 100 руб. – 500 руб.</label>
-  				<input type="range" name="price" id="price" min="100" max="500" step="10" value="200">
+          <div class="filter-controls">
+  				  <input type="range" name="price" id="price" min="100" max="500" step="10" value="200">
+            <!----
+            <div class="scale"><div class="bar"></div></div>
+            <div class="toggle min-toggle"></div>
+            <div class="toggle max-toggle"></div>
+            ---->
+          </div>
   			</div>
   			<div class="filter-fat">
   				<label>Жирность:</label>
-  				<input type="radio" name="fat" id="fat_-0"><label for="fat_0">0%</label>
-  				<input type="radio" name="fat" id="fat_10"><label for="fat_10">до 10%</label>
-  				<input type="radio" name="fat" id="fat_30"><label for="fat_30">до 30%</label>
-  				<input type="radio" name="fat" id="fat_31"><label for="fat_31">выше 30%</label>
+          <div class="filter-controls">
+    				<input type="radio" name="fat" id="fat_0"><label for="fat_0">0%</label>
+    				<input type="radio" name="fat" id="fat_10" checked><label for="fat_10">до 10%</label>
+    				<input type="radio" name="fat" id="fat_30"><label for="fat_30">до 30%</label>
+    				<input type="radio" name="fat" id="fat_31"><label for="fat_31">выше 30%</label>
+          </div>
   			</div>
   			<div class="filter-filler">
   				<label>Наполнители:</label>
-  				<input type="checkbox" name="filler" id="chocolate"><label for="chocolate">шоколадные</label>
-  				<input type="checkbox" name="filler" id="sugar"><label for="sugar">сахарные присыпки</label>
-  				<input type="checkbox" name="filler" id="fruit"><label for="fruit">фрукты</label>
-  				<input type="checkbox" name="filler" id="syrup"><label for="syrup">сиропы</label>
-  				<input type="checkbox" name="filler" id="jam"><label for="jam">джемы</label>
+          <div class="filter-controls">
+    				<input type="checkbox" name="filler" id="chocolate" checked><label for="chocolate">шоколадные</label>
+    				<input type="checkbox" name="filler" id="sugar" checked><label for="sugar">сахарные присыпки</label>
+    				<input type="checkbox" name="filler" id="fruit"><label for="fruit">фрукты</label>
+    				<input type="checkbox" name="filler" id="syrup"><label for="syrup">сиропы</label>
+    				<input type="checkbox" name="filler" id="jam"><label for="jam">джемы</label>
+          </div>
   			</div>
   			<button class="btn">Применить</button>
   		</form>
@@ -74,84 +87,84 @@
         <div class="catalog-item">
           <a href="#">
             <img src="img/IceCream_item_1.jpg" alt="Изображение товара" width="267px" height="267px">
-            <p class="price"><span>310</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+            <p class="price"><span>310</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
             <p class="name"><a href ="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
           </a>
         </div>
         <div class="catalog-item">
           <a href="#">
             <img src="img/IceCream_item_2.jpg" alt="Изображение товара" width="267px" height="267px">
-            <p class="price"><span>380</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+            <p class="price"><span>380</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
             <p class="name"><a href ="#">Сливочно-кофейное с кусочками шоколада</a></p>
           </a>
         </div>
         <div class="catalog-item">
           <a href="#">
             <img src="img/IceCream_item_3.jpg" alt="Изображение товара" width="267px" height="267px">
-            <p class="price"><span>355</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+            <p class="price"><span>355</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
             <p class="name"><a href ="#">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
           </a>
         </div>
         <div class="catalog-item">
           <a href="#">
             <img src="img/IceCream_item_4.jpg" alt="Изображение товара" width="267px" height="267px">
-            <p class="price"><span>415</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+            <p class="price"><span>415</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
             <p class="name"><a href ="#">Сливочное крем-брюле с карамельной подливкой</a></p>
           </a>
         </div>
 	  		<div class="catalog-item">
           <a href="#">
   	  			<img src="img/IceCream_item_5.jpg" alt="Изображение товара" width="267px" height="267px">
-  	  			<p class="price"><span>325</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+  	  			<p class="price"><span>325</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
   	  			<p class="name"><a href ="#">Сливочное с брусничным джемом</a></p>
   	  		</a>
         </div>
 	  		<div class="catalog-item">
           <a href="#">
   	  			<img src="img/IceCream_item_6.jpg" alt="Изображение товара" width="267px" height="267px">
-  	  			<p class="price"><span>410</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+  	  			<p class="price"><span>410</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
   	  			<p class="name"><a href ="#">Сливочно-черничное с цельными ягодами черники</a></p>
   	  		</a>
         </div>
         <div class="catalog-item">
     			<a href="#">
   	  			<img src="img/IceCream_item_7.jpg" alt="Изображение товара" width="267px" height="267px">
-  	  			<p class="price"><span>375</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+  	  			<p class="price"><span>375</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
   	  			<p class="name"><a href ="#">Сливочно-лимонное с карамельной присыпкой</a></p>
     			</a>
         </div>
         <div class="catalog-item">
     			<a href="#">
   	  			<img src="img/IceCream_item_8.jpg" alt="Изображение товара" width="267px" height="267px">
-  	  			<p class="price"><span>320</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+  	  			<p class="price"><span>320</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
   	  			<p class="name"><a href ="#">Сливочное с шоколадной стружкой</a></p>
     			</a>
         </div>
 	  		<div class="catalog-item">
           <a href="#">
   	  			<img src="img/IceCream_item_9.jpg" alt="Изображение товара" width="267px" height="267px">
-  	  			<p class="price"><span>440</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+  	  			<p class="price"><span>440</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
   	  			<p class="name"><a href ="#">Сливочно-ванильное с кусочками шоколада</a></p>
   	  		</a>
         </div>
 	  		<div class="catalog-item">
           <a href="#">
   	  			<img src="img/IceCream_item_10.jpg" alt="Изображение товара" width="267px" height="267px">
-  	  			<p class="price"><span>435</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+  	  			<p class="price"><span>435</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
   	  			<p class="name"><a href ="#">Сливочноe с ментоловым сиропом</a></p>
   	  		</a>
         </div>
 	  		<div class="catalog-item">
           <a href="#">
   	  			<img src="img/IceCream_item_11.jpg" alt="Изображение товара" width="267px" height="267px">
-  	  			<p class="price"><span>355</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+  	  			<p class="price"><span>355</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
   	  			<p class="name"><a href ="#">Сливочное с кусочками черного шоколада</a></p>
   	  		</a>
         </div>
 	  		<div class="catalog-item">
           <a href="#">
   	  			<img src="img/IceCream_item_12.jpg" alt="Изображение товара" width="267px" height="267px">
-  	  			<p class="price"><span>420</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
+  	  			<p class="price"><span>420</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span class="kg">/кг</span></p>
   	  			<p class="name"><a href ="#">Сливочное с мятным сиропом</a></p>
   	  		</a>
         </div>		
