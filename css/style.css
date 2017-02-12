@@ -57,14 +57,11 @@ h3 {
 	margin-left: 26px;
 	border-bottom: 1px solid rgba(255,255,255,0.2);
 }
+.main-menu .active {
+	cursor: pointer;
+}
 .main-menu li:hover > ul {
 	display: block;
-}
-.main-menu .active {
-	background-color: #d07058;
-	border-radius: 20px;
-	padding: 5px 15px;
-	margin-left: 10px;
 }
 .sub-menu {
 	display: none;
@@ -74,21 +71,34 @@ h3 {
 	background: #ffffff;
 	margin-top: 5px;
 	border-radius: 5px;
+	z-index: 100;
 }
 .sub-menu li {
 	margin: 0;
 	display: block;
 	padding: 10px 20px;
 }
-.sub-menu li:not(:first-child):hover {
+.sub-menu li:hover:not(.sub-menu-caption) {
 	background-color: #fbded7;
 }
-.sub-menu-caption a {
+.sub-menu li:active:not(.sub-menu-caption) {
+	background-color: #f6b5a5;
+}
+.sub-menu .active-li {
+	background-color: #d07058;
+	color: #ffffff;
 	cursor: default;
+}
+.sub-menu .active-li:hover {
+	background-color: #d07058 !important;
+}
+.sub-menu .active-li:active {
+	background-color: #d07058 !important;
 }
 .sub-menu-caption {
 	font-weight: 700;
 	position: relative;
+	cursor: default;
 }
 .sub-menu-caption::after {
 	content: "";
@@ -276,6 +286,7 @@ body > input[type="radio"] {
 }
 .breadcrumbs {
 	margin-top: -22px;
+	z-index: 90;
 }
 .breadcrumbs ul {
 	margin: 0;
@@ -325,22 +336,23 @@ body > input[type="radio"] {
 .filter-price label {
 	margin-left: 29px;
 }
-/*
 .filter-price .filter-controls {
     position: relative;
-    height: 80px;
-    padding: 0 30px;
+    left: 35px;
+    height: 35px;
     overflow: hidden;
 }
 .scale {
-    margin-top: 22px;
-    width: 188px;
+	width: 189px;
+    margin-top: 21px;
     height: 4px;
     background: #d1dad3;
 }
 .bar {
     height: 4px;
     background: #ffffff;
+    margin-left: 30px;
+    width: 100px;
 }
 .toggle {
     position: absolute;
@@ -348,34 +360,16 @@ body > input[type="radio"] {
     left: 30px;
     width: 4px;
     height: 4px;
-    border: 8px solid white;
+    border: 8px solid #ffffff;
+    background: #ffffff;
     cursor: pointer;
     border-radius: 50%;
 }
 .min-toggle {
-    left: 70px;
+    left: 19px;
 }
 .max-toggle {
-    left: 165px;
-}
-*/
-.filter-price input[type="range"] {
-	margin-top: 5px;
-	margin-bottom: 15px;
-	position: relative;
-	top: 8px;
-	left: 39px;
-}
-.filter-price input[type="range"]::before {
-	content: "";
-	background-color: rgba(255,255,255,0.3);
-	border-radius: 90px;
-	cursor: pointer;
-	width: 220px;
-	height: 36px;
-	position: absolute;
-	top: -8px;
-	left: -24px;
+    left: 117px;
 }
 .filter-fat label:first-child {
 	margin-left: 72px;
@@ -687,7 +681,6 @@ body > input[type="radio"] {
 	top: 138px;
 	left: 266px;
 	background: url(../img/Map_IceCream.png) no-repeat;
-
 }
 .address {
 	background-color: #ffffff;
@@ -730,6 +723,12 @@ body > input[type="radio"] {
 .pagination li {
 	display: inline-block;
  	padding: 0 10px;
+ 	cursor: pointer;
+}
+.pagination .active {
+	background-color: #ffffff;
+	color: #000000;
+	border-radius: 50%;
 }
 .main-footer {
 	display: flex;
@@ -780,4 +779,7 @@ body > input[type="radio"] {
 }
 .design a {
 	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.design img {
+	padding-left: 29px;
 }
