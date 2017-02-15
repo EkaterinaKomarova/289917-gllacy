@@ -59,6 +59,12 @@ h3 {
 }
 .main-menu .active {
 	cursor: pointer;
+	background-color: #d07058;
+	border-radius: 20px;
+	padding: 5px 15px;
+	margin-top: -5px;
+	margin-left: 11px;
+	margin-right: -15px;
 }
 .main-menu li:hover > ul {
 	display: block;
@@ -138,8 +144,15 @@ h3 {
 	height: 20px;
 	background: url(../img/Sprite_User.png) no-repeat;
 	background-position: -50px -15px;
+}
+.search:hover {
 
 }
+/*.search:hover {
+	background-color: #ffffff;
+	background: url(../img/Sprite_User_Black.png) no-repeat;
+	background-position: -50px -15px;
+}*/
 .enter {
 	position: relative;
 	padding: 7px 14px 7px 43px;
@@ -782,4 +795,27 @@ body > input[type="radio"] {
 }
 .design img {
 	padding-left: 29px;
+}
+.modal-wrapper {
+	background-color: rgba(0,0,0,0.1);
+}
+.modal {
+	border-radius: 5px;
+	background-color: #ffffff;
+	padding: 15px 10px;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 24px;
+	
+}
+.modal input {
+	border: 1px solid #d3d3d2;
+	border-radius: 5px;
+	padding: 10px;
+}
+.modal-search ~ .search:hover {
+	display: block;
+}
+.modal-search input {
+	width: 340px;
 }
