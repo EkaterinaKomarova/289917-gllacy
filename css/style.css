@@ -47,6 +47,7 @@ h3 {
 	margin-top: 28px;
 	width: 710px;
 	float: left;
+	position: relative;
 }
 .main-menu ul {
 	margin: 0;
@@ -65,17 +66,30 @@ h3 {
 	margin-top: -5px;
 	margin-left: 11px;
 	margin-right: -15px;
+	border-bottom: none;
 }
 .main-menu li:hover > ul {
 	display: block;
 }
+.guidance > a:hover {
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+	border-radius: 20px;
+	padding: 5px 15px;
+	margin-top: -5px;
+	margin-left: -15px;
+	margin-right: -15px;
+	border-bottom: none;
+}
 .sub-menu {
 	display: none;
 	position: absolute;
+	/*top: 32px;*/
+    left: 7px;
 	list-style: none;
 	color: #323232;
 	background: #ffffff;
-	margin-top: 5px;
 	border-radius: 5px;
 	z-index: 100;
 }
@@ -84,22 +98,20 @@ h3 {
 	display: block;
 	padding: 10px 20px;
 }
-.sub-menu li:hover:not(.sub-menu-caption) {
+.sub-menu li:hover:not(.sub-menu-caption):not(.active-li) {
 	background-color: #fbded7;
 }
-.sub-menu li:active:not(.sub-menu-caption) {
+.sub-menu li:active:not(.sub-menu-caption):not(.active-li) {
 	background-color: #f6b5a5;
+}
+.sub-menu li:hover:last-child {
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 .sub-menu .active-li {
 	background-color: #d07058;
 	color: #ffffff;
 	cursor: default;
-}
-.sub-menu .active-li:hover {
-	background-color: #d07058 !important;
-}
-.sub-menu .active-li:active {
-	background-color: #d07058 !important;
 }
 .sub-menu-caption {
 	font-weight: 700;
