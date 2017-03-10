@@ -79,7 +79,8 @@ h3 {
 .main-menu li:hover > ul {
 	display: block;
 }
-.main-menu li:hover > a:hover {
+/*.main-menu li:hover > a*/
+.pointing:hover > a {
 	background-color: #ffffff;
 	color: #000000;
 	font-weight: bold;
@@ -142,7 +143,7 @@ h3 {
 	font-size: 14px;
 	line-height: 16px;
 	margin-top: 31px;
-	margin-left: 26px;
+	margin-left: 16px;
 }
 .user a {
 	margin-left: 10px;
@@ -151,62 +152,39 @@ h3 {
 	margin-left: 0;
 }
 .search {
-	position: relative;
 	background-color: rgba(255,255,255,0.3);
 	border-radius: 50%;
-	font-size: 0;
-	padding: 16px;
-	top: -5px;
+	padding: 8px 10px;
 }
-.search::before {
-	content: "";
-	position: absolute;
-	top: 8px;
-	left: 1px;
-	width: 21px;
-	height: 20px;
-	background: url(../img/Sprite_User.png) no-repeat;
-	background-position: -50px -15px;
+.search i {
+	font-size: 16px;
 }
-.search:hover {
-
-}
-/*.search:hover {
-	background-color: #ffffff;
-	background: url(../img/Sprite_User_Black.png) no-repeat;
-	background-position: -50px -15px;
-}*/
 .enter {
-	position: relative;
-	padding: 7px 14px 7px 43px;
+	padding: 8px 16px;
 	background-color: rgba(255,255,255,0.3);
 	border-radius: 20px;
 }
-.enter::before {
-	content: "";
-	position: absolute;
-	top: 6px;
-	left: 15px;
-	width: 21px;
-	height: 20px;
-	background: url(../img/Sprite_User.png) no-repeat;
-	background-position: -14px -15px;
+.enter i {
+	font-size: 20px;
+	position: relative;
+	top: 2px;
+	right: 3px;
 }
 .basket {
-	position: relative;
-	padding: 7px 35px 7px 40px;
+	padding: 8px 42px 8px 16px;
 	background-color: rgba(255,255,255,0.3);
 	border-radius: 20px;
 }
-.basket::before {
-	content: "";
-	position: absolute;
-	top: 6px;
-	left: 16px;
-	width: 21px;
-	height: 20px;
-	background: url(../img/Sprite_User.png) no-repeat;
-	background-position: -97px -15px;
+.basket i {
+	font-size: 20px;
+	position: relative;
+	top: 2px;
+	right: 3px;
+}
+.search:hover,
+.enter:hover,
+.basket:hover {
+	color: #000;
 }
 .add {
 	padding: 7px 19px 7px 40px;
@@ -340,16 +318,10 @@ body > input[type="radio"] {
 .breadcrumbs li {
 	position: relative;
 	display: inline-block;
-	padding-right: 10px;
+	padding-right: 5px;
 }
 .breadcrumbs li a {
 	border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-.breadcrumbs li:not(:first-child)::after {
-	content: "»";
-	position: absolute;
-	top: 0;
-	left: -13px;
 }
 .filters {
 	margin-bottom: 40px;
@@ -780,16 +752,24 @@ body > input[type="radio"] {
 	display: flex;
 	justify-content: flex-end;
 	margin-top: 70px;
+	font-weight: 700;
 }
 .pagination li {
 	display: inline-block;
  	padding: 0 10px;
- 	cursor: pointer;
 }
+.pagination li:hover:not(.active):not(:first-child) {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	padding: 4px 10px;
+	cursor: pointer;
+}
+
 .pagination .active {
 	background-color: #ffffff;
 	color: #000000;
 	border-radius: 50%;
+	padding: 4px 10px;
 }
 .main-footer {
 	display: flex;
@@ -825,9 +805,13 @@ body > input[type="radio"] {
 	font-weight: 700;
 	list-style: none;
 	padding-left: 5px;
-    /*background: url("../img/Heart.png") no-repeat;
+  /*background: url("../img/Heart.png") no-repeat;
     background-position: 0 2px;
     padding-left: 20px;*/
+}
+.heart:hover {
+	color: #ffbc9e;
+	cursor: pointer;
 }
 .footer-navigation li:nth-child(2) {
 	padding-left: 20px;
@@ -845,26 +829,62 @@ body > input[type="radio"] {
 .design img {
 	padding-left: 29px;
 }
+.modal-wrapper input,
+.btn {
+	border-style: none;
+}
 .modal-wrapper {
 	background-color: rgba(0,0,0,0.1);
 }
-.modal {
-	border-radius: 5px;
-	background-color: #ffffff;
-	padding: 15px 10px;
+.modal-search {
 	display: inline-block;
+	border-radius: 5px;
+	background-color: #f8f7f4;
 	font-size: 14px;
 	line-height: 24px;
-	
+	padding: 15px;
+	margin: 10px;
 }
-.modal input {
+.modal-search input {
+	width: 310px;
 	border: 1px solid #d3d3d2;
 	border-radius: 5px;
 	padding: 10px;
 }
+.modal-enter {
+	display: inline-block;
+	width: 277px;
+	border-radius: 5px;
+	background-color: #f8f7f4;
+	font-size: 14px;
+	line-height: 24px;
+	padding: 15px;
+	margin: 10px;
+}
+.modal-enter input {
+	width: 254px;
+	border: 1px solid #d3d3d2;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.modal-enter .btn {
+	float: left;
+	font-size: 18px;
+	line-height: 24px;
+}
+.other-enter a {
+	color:  #323232;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 24px;
+	text-decoration: underline;
+	float: left;
+	margin-left: 20px;
+}
+
+
+/*
 .modal-search ~ .search:hover {
 	display: block;
-}
-.modal-search input {
-	width: 340px;
 }

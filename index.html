@@ -7,22 +7,9 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 	<link href="css/font-awesome.css" rel="stylesheet">
+	<link href="js/script.js" rel="stylesheet">
   </head>
   <body>
-
-  <!--<div class="modal-wrapper">
-    <div class="modal">
-      <form class="modal-search">
-        <input type="search" name="search" placeholder="Что ищем?"> 
-      </form>
-      <form class="modal-enter">
-        <input type="email" name="email" placeholder="Электронная почта">
-        <input type="password" name="password" placeholder="Пароль">
-        <button class="btn">Войти</button>
-      </form>
-    </div>
-  </div>-->
-
     <input type="radio" name="switch" id="switch_1" checked>
     <input type="radio" name="switch" id="switch_2">
     <input type="radio" name="switch" id="switch_3">
@@ -33,7 +20,7 @@
     	  </div>
     	  <div class="main-menu">
     		<ul>
-    		  	<li>
+    		  	<li class="pointing">
 					<a href="./catalog.html">Каталог</a>
 						
 							<ul class="sub-menu">
@@ -44,14 +31,14 @@
 								<li><a href="#">Мелорин</a></li>
 							</ul>
 				</li>
-    		  	<li><a href="#">Доставка и оплата</a></li>
-    			<li><a href="#">О компании</a></li>
+    		  	<li class="pointing"><a href="#">Доставка и оплата</a></li>
+    			<li class="pointing"><a href="#">О компании</a></li>
     		</ul>
     	  </div>
     	  <div class="user">
-    	  	<a href="#" class="search">Поиск</a>
-    	  	<a href="#" class="enter">Вход</a>
-    	  	<a href="#" class="basket">Пусто</a>
+    	  	<a href="#" class="search"><i class="fa fa-search" aria-hidden="true"></i></a>
+    	  	<a href="#" class="enter"><i class="fa fa-sign-in" aria-hidden="true"></i> Вход</a>
+    	  	<a href="#" class="basket"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Пусто</a>
     	  </div>
     	</header>
       <div class="container">
@@ -174,7 +161,7 @@
     			</div>
   			<div class="footer-navigation">
     				<ul>
-    					<li class="heart"><a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Для поставщиков</a></li>
+    					<li class="heart"><i class="fa fa-heart" aria-hidden="true"></i> <a href="#">Для поставщиков</a></li>
     					<li><a href="#">О производстве</a></li>
     					<li><a href="#">Наши документы</a></li>
     					<li><a href="#">Экологические стандарты</a></li>
@@ -186,6 +173,28 @@
     			</div>	
     		</div>	
     	</footer>
+		
+	<div class="modal-wrapper">
+		<div class="modal">
+			<div class="modal-search">
+				<form>
+					<input type="search" name="search" placeholder="Что ищем?"> 
+				</form>
+			</div>
+			<div class="modal-enter">
+				<form>
+					<input type="email" name="email" placeholder="Электронная почта">
+					<input type="password" name="password" placeholder="Пароль">
+					<a href="#" class="btn">Войти</a>
+					<div class="other-enter">
+						<a href="#">Забыли пароль?</a>
+						<a href="#">Новая регистрация</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+		
     </div>
   </body>
 </html>
