@@ -2,6 +2,14 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+.other a:hover,
+.other a:focus,
+footer a:hover,
+footer a:focus,
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+	color: #ffbc9e;
+}
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
@@ -71,7 +79,7 @@ h3 {
 .main-menu li:hover > ul {
 	display: block;
 }
-.guidance > a:hover {
+.main-menu li:hover > a:hover {
 	background-color: #ffffff;
 	color: #000000;
 	font-weight: bold;
@@ -81,6 +89,9 @@ h3 {
 	margin-left: -15px;
 	margin-right: -15px;
 	border-bottom: none;
+}
+.main-menu li:hover > a:focus {
+	box-shadow: inset 0 1px 1px 1px #5f5f5f;
 }
 .sub-menu {
 	display: none;
@@ -267,6 +278,9 @@ body > input[type="radio"] {
 #switch_3:checked ~ .wrapper label[for="switch_3"] {
 	background: #ffffff;
 }
+.wrapper label[for^="switch_"]:hover {
+	background-color: rgba(248, 247, 244, 0.4);
+}
 #switch_1:checked ~ .wrapper {
 	background-color: #849d8f;
 	background-image: url(../img/IceCream_1.png);
@@ -308,6 +322,12 @@ body > input[type="radio"] {
 	box-shadow: 2px 2px 2px rgba(172,16,0,0.64);
 	color: #ffffff;
 	font-weight: 700;
+}
+.btn:hover {
+	background: linear-gradient(90deg, #FF604B 0%, #FF604B 100%)
+}
+.btn:focus{
+	box-shadow: inset 0 1px 1px 1px #5f5f5f;
 }
 .breadcrumbs {
 	margin-top: -22px;
@@ -522,6 +542,9 @@ body > input[type="radio"] {
 .catalog-item p {
 	margin-bottom: 0;
 }
+.catalog-item .btn {
+	border-radius: 20px;
+}
 .catalog-item:hover {
 	background-color: rgba(255,255,255,0.3);
 	border-radius: 5px;
@@ -552,6 +575,18 @@ body > input[type="radio"] {
 }
 .name a {
 	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.catalog-item:hover > .name a{
+	border-bottom: none;
+}
+.view {
+	display: none;
+}
+.catalog-item:hover > .view{
+	display: block;
+	width: 150px;
+	margin: 0 auto;
+	margin-top: 20px;
 }
 .info {
 	display: flex;
@@ -698,7 +733,7 @@ body > input[type="radio"] {
 	background: url(../img/Map.jpg) no-repeat 50% 50%;
 	position: relative;
 }
-.map::after {
+/*.map::after {
 	content: "";
 	position: absolute;
 	width: 218px;
@@ -706,7 +741,7 @@ body > input[type="radio"] {
 	top: 138px;
 	left: 266px;
 	background: url(../img/Map_IceCream.png) no-repeat;
-}
+}*/
 .address {
 	background-color: #ffffff;
 	color: #323232;
@@ -722,6 +757,7 @@ body > input[type="radio"] {
 	margin-right: 27.6px;
 	display: flex;
 	flex-direction: column;
+	z-index: 1000;
 }
 .address p {
 	margin: 0;
@@ -788,9 +824,10 @@ body > input[type="radio"] {
 .heart {
 	font-weight: 700;
 	list-style: none;
-    background: url("../img/Heart.png") no-repeat;
+	padding-left: 5px;
+    /*background: url("../img/Heart.png") no-repeat;
     background-position: 0 2px;
-    padding-left: 20px;
+    padding-left: 20px;*/
 }
 .footer-navigation li:nth-child(2) {
 	padding-left: 20px;
