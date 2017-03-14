@@ -15,32 +15,36 @@
     <input type="radio" name="switch" id="switch_3">
     <div class="wrapper">
     	<header class="main-header container">
-    	  <div class="logo">
-    	  	<img src="img/Logo_GllacyShop.png" alt="Логотип" width="154px" height="64px">
-    	  </div>
-    	  <div class="main-menu">
-    		<ul>
-    		  	<li class="menu-item">
-					<a href="./catalog.html">Каталог</a>
-						<div class="sub-menu-wrap">
-							<ul class="sub-menu">
-								<li class="sub-menu-caption">Новинки</li>
-								<li><a href="./catalog.html">Сливочное</a></li>
-								<li><a href="#">Щербеты</a></li>
-								<li><a href="#">Фруктовый лёд</a></li>
-								<li><a href="#">Мелорин</a></li>
-							</ul>
-						</div>
-				</li>
-    		  	<li class="menu-item"><a href="#">Доставка и оплата</a></li>
-    			<li class="menu-item"><a href="#">О компании</a></li>
-    		</ul>
-    	  </div>
-    	  <div class="user">
-    	  	<a href="#" class="search"><i class="fa fa-search" aria-hidden="true"></i></a>
-    	  	<a href="#" class="enter"><i class="fa fa-sign-in" aria-hidden="true"></i> Вход</a>
-    	  	<a href="#" class="basket"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Пусто</a>
-    	  </div>
+		  <div class="main-menu-left-wrap">
+			  <div class="logo">
+				<img src="img/Logo_GllacyShop.png" alt="Логотип" width="154px" height="64px">
+			  </div>
+			  <div class="main-menu">
+				<ul>
+					<li class="menu-item">
+						<a href="./catalog.html">Каталог</a>
+							<div class="sub-menu-wrap">
+								<ul class="sub-menu">
+									<li class="sub-menu-caption">Новинки</li>
+									<li><a href="./catalog.html">Сливочное</a></li>
+									<li><a href="#">Щербеты</a></li>
+									<li><a href="#">Фруктовый лёд</a></li>
+									<li><a href="#">Мелорин</a></li>
+								</ul>
+							</div>
+					</li>
+					<li class="menu-item"><a href="#">Доставка и оплата</a></li>
+					<li class="menu-item"><a href="#">О компании</a></li>
+				</ul>
+			  </div>
+		  </div>
+		  <div class="main-menu-right-wrap">
+			  <div class="user">
+				<a href="#" class="search"><i class="fa fa-search" aria-hidden="true"></i></a>
+				<a href="#" class="enter"><i class="fa fa-sign-in" aria-hidden="true"></i> Вход</a>
+				<a href="#" class="basket"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Пусто</a>
+			  </div>
+		  </div>
     	</header>
       <div class="container">
         <div class="contacts">
@@ -131,14 +135,14 @@
     				<h3><a href="#">10  способов сервировки<br>фруктовых щербетов к<br>столу</a></h3>
     			</div>
     			<div class="delivery">
-            <div class="delivery-background">
-      				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      				<form method="post">
-      					<input type="text" name="delivery" placeholder="Электронная почта">
-      					<button class="btn">Отправить</button>
-      				</form>
-      			</div>
-          </div>
+					<div class="delivery-background">
+						<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+						<form method="post">
+							<input type="text" name="delivery" placeholder="Электронная почта">
+							<button class="btn">Отправить</button>
+						</form>
+					</div>
+				</div>
     		</div>
     	</div>
     	<div class="map" id="yandex-map">
@@ -155,10 +159,14 @@
   	<footer>
   		<div class="main-footer container">
     			<div class="social">
-    				<a href="#"><img src="img/Twitter.png" alt="Twitter" width="32px" height="32px"></a>
-    				<a href="#"><img src="img/Instagram.png" alt="Instagram" width="32px" height="32px"></a>
-    				<a href="#"><img src="img/Facebook.png" alt="Facebook" width="32px" height="32px"></a>
-    				<a href="#"><img src="img/Vkontakte.png" alt="Vkontakte" width="32px" height="32px"></a>
+    				<a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a>
+					<!--<a href="#"><img src="img/Twitter.png" alt="Twitter" width="32px" height="32px"></a>
+					<a href="#"><img src="img/Instagram.png" alt="Instagram" width="32px" height="32px"></a>
+					<a href="#"><img src="img/Facebook.png" alt="Facebook" width="32px" height="32px"></a>
+					<a href="#"><img src="img/Vkontakte.png" alt="Vkontakte" width="32px" height="32px"></a>-->
     			</div>
   			<div class="footer-navigation">
     				<ul>
@@ -192,6 +200,28 @@
 						<a href="#">Новая регистрация</a>
 					</div>
 				</form>
+			</div>
+			<div class="modal-basket">
+				<table>
+					<tr>
+						<td><span class="close">&times</span></td>
+						<td><img src="img/IceCream_item_1.jpg" alt="Изображение товара" width="33px" height="33px"></td>
+						<td>Пломбир с апельсиновым джемом</td>
+						<td>1,5 кг х <span class="light">200 руб.</span></td>
+						<td>300 руб.</td>
+					</tr>
+					<tr>
+						<td><span class="close">&times</span></td>
+						<td><img src="img/IceCream_item_3.jpg" alt="Изображение товара" width="33px" height="33px"></td>
+						<td>Клубничный пломбир с присыпкой из белого шоколада</td>
+						<td>1,5 кг х <span class="light">300 руб.</span></td>
+						<td>450 руб.</td>
+					</tr>
+				</table>
+				<div class="totals">
+					<p>Итого: 750 руб.</p>
+					<a class="btn" href="#">Оформить заказ</a>
+				</div>
 			</div>
 		</div>
 	</div>
