@@ -150,6 +150,7 @@ h3 {
 	background-color: #d1d0ce;
 }
 .user {
+	width: 265px;
 	font-size: 14px;
 	line-height: 16px;
 	margin-top: 31px;
@@ -224,10 +225,10 @@ h3 {
 }
 .wrapper::before,
 .wrapper::after {
-	background-image: url(../img/IceCream_2.png);
+	background: #8996a6 url(../img/IceCream_2.png) no-repeat;
 }
 .wrapper::after {
-	background-image: url(../img/IceCream_3.png);
+	background: #9d8b84 url(../img/IceCream_3.png) no-repeat;
 }
 .wrapper {
 	background: #849d8f url(../img/IceCream_1.png) no-repeat;
@@ -491,12 +492,14 @@ body > input[type="radio"] {
 	background-color: #ffffff;
 	color:  #323232;
 	border: none;
+	padding: 9px 32px;
 }
 .filters .btn:focus {
 	background-color: #ededed;
 	color:  #323232;
-	border: none;
 	box-shadow: inset 0 2px 3px 1px #666666;
+	border: none;
+	padding: 9px 32px;
 }
 .stock {
 	display: flex;
@@ -519,12 +522,10 @@ body > input[type="radio"] {
 	padding-bottom: 45px;
 }
 .raspberry {
-	background-color: #980119;
-	background: url(../img/Raspberry.jpg) no-repeat;
+	background: #980119 url(../img/Raspberry.jpg) no-repeat;
 }
 .chocolate {
-	background-color: #6a422f;
-	background: url(../img/Chocolate.jpg) no-repeat;
+	background: #6a422f url(../img/Chocolate.jpg) no-repeat;
 }
 .stock-item a {
 	font-size: 18px;
@@ -611,11 +612,10 @@ body > input[type="radio"] {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	background-color: #ede0c3;
 	border-radius: 15px;
 	padding: 23px 20px;
 	margin-bottom: 40px;
-	background: url(../img/Wafer_pattern.png) repeat;
+	background: #ede0c3 url(../img/Wafer_pattern.png) repeat;
 }
 .info h3 {
 	margin: 0;
@@ -689,14 +689,13 @@ body > input[type="radio"] {
 .news {
 	width: 560px;
 	height: 220px;
-	background-color: #ffffff;
 	border-radius: 15px;
 	color: #323232;
 	line-height: 30px;
 	padding-top: 19px;
 	padding-left: 20px;
 	box-sizing: border-box;
-	background: url(../img/Strawberry.jpg) no-repeat 16% 39%;
+	background: #ffffff url(../img/Strawberry.jpg) no-repeat 16% 39%;
 }
 .news p {
 	margin: 0;
@@ -713,7 +712,7 @@ body > input[type="radio"] {
 	background-color: #f8f7f4;
 	border-radius: 15px;
 	color: #5a5a5a;
-	background: url(../img/Delivery_pattern.png) repeat #ffffff;
+	background: #ffffff url(../img/Delivery_pattern.png) repeat;
 	position: relative;
 }
 .delivery-background {
@@ -722,8 +721,8 @@ body > input[type="radio"] {
 	background-color: #f8f7f4;
 	border-radius: 15px;
 	position: absolute;
-	top: 1px;
-	left: 7px;
+	top: 5px;
+    left: 5px;
 	padding: 32px 22px;
 	box-sizing: border-box;
 }
@@ -813,18 +812,19 @@ body > input[type="radio"] {
 .pagination {
 	display: flex;
 	justify-content: flex-end;
-	margin-top: 80px;
-	margin-bottom: 30px;
+	font-size: 17px;
 	font-weight: 700;
+    margin-top: 87px;
+	margin-bottom: 30px;
 }
 .pagination li {
 	display: inline-block;
- 	padding: 0 10px;
+ 	padding: 0 8px;
 }
 .pagination li:hover:not(.active):not(:first-child) {
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 50%;
-	padding: 4px 10px;
+	padding: 2px 8px;
 	cursor: pointer;
 }
 
@@ -832,7 +832,7 @@ body > input[type="radio"] {
 	background-color: #ffffff;
 	color: #000000;
 	border-radius: 50%;
-	padding: 4px 10px;
+	padding: 2px 8px;
 }
 .main-footer {
 	display: flex;
@@ -849,19 +849,19 @@ body > input[type="radio"] {
 	display: inline-block;
 	width: 32px;
 	height: 32px;
-	background-color: rgb(231, 236, 233);
-	color: rgb(133, 158, 144);
+	background-color: #e7ece9;
+	color: #859e90;
 	text-align: center;
 	border: 2px solid #c2cec7;
 	border-radius: 50%;
 	position: relative;
 }
 .social a:hover {
-	color: rgb(133, 158, 144);
+	color: #859e90;
 	background-color: #ffffff;
 }
 .social a:focus {
-	color: rgb(133, 158, 144);
+	color: #859e90;
 	box-shadow: inset 0 2px 2px 1px #666666;
 }
 .social i {
@@ -903,9 +903,6 @@ body > input[type="radio"] {
 	font-weight: 700;
 	list-style: none;
 	padding-left: 5px;
-  /*background: url("../img/Heart.png") no-repeat;
-    background-position: 0 2px;
-    padding-left: 20px;*/
 }
 .heart:hover {
 	color: #ffbc9e;
