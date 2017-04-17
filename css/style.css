@@ -98,7 +98,7 @@ h3 {
 	margin-right: -15px;
 	border-bottom: none;
 }
-.main-menu li:hover > a:focus {
+.menu-item:hover > a:focus {
 	box-shadow: inset 0 1px 1px 1px #5f5f5f;
 }
 .sub-menu-wrap {
@@ -155,8 +155,9 @@ h3 {
 	line-height: 16px;
 	margin-top: 31px;
 	margin-left: 16px;
+	position: relative;
 }
-.user a {
+.user-item {
 	margin-left: 10px;
 	}
 .user a:first-child {
@@ -166,7 +167,6 @@ h3 {
 	background-color: rgba(255,255,255,0.3);
 	border-radius: 50%;
 	padding: 8px 10px;
-	position: relative;
 }
 .search i {
 	font-size: 16px;
@@ -322,7 +322,7 @@ body > input[type="radio"] {
 }
 .breadcrumbs {
 	margin-top: -22px;
-	z-index: 90;
+	z-index: 99;
 }
 .breadcrumbs ul {
 	margin: 0;
@@ -352,9 +352,13 @@ body > input[type="radio"] {
 	line-height: 18px;
 }
 .filter-controls select {
+	border: none;
+	-moz-appearance: none;
+}
+.filter-controls select {
 	margin-top: 5px;
 	margin-bottom: 15px;
-	padding: 7px 30px 7px 10px;
+	padding: 8px 31px 8px 11px;
 	background-color: rgba(255,255,255,0.3);
 	border-radius: 20px;
 	color: #ffffff;
@@ -547,12 +551,36 @@ body > input[type="radio"] {
 	flex-wrap: wrap;
 	margin-bottom: 15px;
 }
-.catalog-item-wrap {
-	position:relative;
-}
 .catalog-item {
+	position: relative;
 	width: 267px;
 	padding: 5px 9px 20px 9px;
+}
+.catalog-item::before {
+	display: none;
+	z-index: -100;
+}
+.catalog-item:hover::before {
+	content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    padding-bottom: 60px;
+    background-color: rgba(255,255,255,.2);
+    border-radius: 5px;
+    box-shadow: 0 20px 20px rgba(0,0,0,.4);
+}
+.catalog-item:hover::before + .catalog-item {
+	z-index: 10;
+}
+.view {
+	display: none;
+}
+.catalog-item:hover .view {
+	display: block;
 }
 .catalog-item img {
 	border-radius: 50%;
@@ -562,12 +590,9 @@ body > input[type="radio"] {
 }
 .catalog-item .btn {
 	border-radius: 20px;
-}
-.catalog-item:hover {
-	background-color: rgba(255,255,255,0.3);
-	border-radius: 5px;
-	/*position: absolute;
-	z-index: 1001;*/
+	position: absolute;
+	top: 340px;
+    left: 47px;
 }
 .hit {
 	position: absolute;
@@ -598,15 +623,6 @@ body > input[type="radio"] {
 }
 .catalog-item:hover > .name a{
 	border-bottom: none;
-}
-.view {
-	display: none;
-}
-.catalog-item:hover > .view{
-	display: block;
-	width: 150px;
-	margin: 0 auto;
-	margin-top: 20px;
 }
 .info {
 	display: flex;
@@ -786,7 +802,7 @@ body > input[type="radio"] {
 	margin-right: 27.6px;
 	display: flex;
 	flex-direction: column;
-	z-index: 1000;
+	z-index: 100;
 }
 .address p {
 	margin: 0;
@@ -912,17 +928,13 @@ body > input[type="radio"] {
 	padding-left: 20px;
 }
 .design {
-	padding-top: 19px;
-	padding-bottom: 25px;
+	margin: 19px 0 25px 9px;
 }
 .design p {
 	margin: 0;
 }
 .design a {
 	border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-.design img {
-	padding-left: 29px;
 }
 .modal-wrapper input,
 .btn {
@@ -939,8 +951,9 @@ body > input[type="radio"] {
 	line-height: 24px;
 	padding: 15px;
 	position: absolute;
-	top: 70px;
-	right: 300px;
+	top: 70%;
+    right: 86%;
+    z-index: 100;
 }
 .modal-search input {
 	width: 310px;
@@ -957,8 +970,9 @@ body > input[type="radio"] {
 	line-height: 24px;
 	padding: 15px;
 	position: absolute;
-	top: 70px;
-	right: 200px;
+	top: 70%;
+    right: 50%;
+    z-index: 100;
 }
 .modal-enter input {
 	width: 254px;
@@ -978,7 +992,8 @@ body > input[type="radio"] {
 	font-weight: 400;
 	line-height: 24px;
 	text-decoration: underline;
-	float: left;
+	display: block;
+	text-align: right;
 	margin-left: 20px;
 }
 .modal-basket {
@@ -989,9 +1004,15 @@ body > input[type="radio"] {
 	line-height: 16px;
 	border-radius: 5px;
 	padding: 10px 20px;
+	width: 500px;
 	position: absolute;
-	top: 70px;
-	right: 68px;
+	top: 70%;
+	right: 0%;
+	z-index: 100;
+}
+.modal-basket > p {
+	font-size: 16px;
+	text-align: center;
 }
 .modal-basket td {
 	padding: 20px 5px;
@@ -1020,6 +1041,6 @@ body > input[type="radio"] {
 	font-weight: 700;
 	line-height: 24px;
 }
-
-
-
+.modal-content-show {
+	display: block;
+}

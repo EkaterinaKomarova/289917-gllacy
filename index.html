@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-	<link href="css/font-awesome.css" rel="stylesheet">
+	  <link href="css/font-awesome.css" rel="stylesheet">
   </head>
   <body>
     <input type="radio" name="switch" id="switch_1" checked>
@@ -21,7 +21,7 @@
 			  <div class="main-menu">
 				<ul>
 					<li class="menu-item">
-						<a href="./catalog.html">Каталог</a>
+						<a href="#">Каталог</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
 									<li class="sub-menu-caption">Новинки</li>
@@ -39,9 +39,38 @@
 		  </div>
 		  <div class="main-menu-right-wrap">
 			  <div class="user">
-				<a href="#" class="search"><i class="fa fa-search" aria-hidden="true"></i></a>
-				<a href="#" class="enter"><i class="fa fa-sign-in" aria-hidden="true"></i> Вход</a>
-				<a href="#" class="basket"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Пусто</a>
+  				<a href="#" class="user-item search"><i class="fa fa-search" aria-hidden="true"></i></a>
+  				<a href="#" class="user-item enter"><i class="fa fa-sign-in" aria-hidden="true"></i> Вход</a>
+  				<a href="#" class="user-item basket"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Пусто</a>
+          <!-- Модальные окна -->
+          <div class="modal-wrapper">
+            <div class="modal">
+              <div class="modal-search">
+                <form>
+                  <input type="search" name="search" placeholder="Что ищем?"> 
+                </form>
+              </div>
+              <div class="modal-enter">
+                <form>
+                  <input type="email" name="email" placeholder="Электронная почта">
+                  <input type="password" name="password" placeholder="Пароль">
+                  <a href="#" class="btn">Войти</a>
+                  <div class="other-enter">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Новая регистрация</a>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-basket">             
+                <p>Товар не выбран</p>
+                <div class="totals">
+                  <p>Итого: 0 руб.</p>
+                  <a class="btn" href="#">Оформить заказ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  -->
 			  </div>
 		  </div>
     	</header>
@@ -145,7 +174,7 @@
     		</div>
     	</div>
     	<div class="map" id="yandex-map">
-			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=mzVx9mfuZmt_8V_w7CSSQx3FbrWNfy7I&amp;width=1200&amp;height=430&amp;id=yandex-map&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+	      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3AmzVx9mfuZmt_8V_w7CSSQx3FbrWNfy7I&amp;width=1200&amp;height=430&amp;id=yandex-map&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
     		<div class="address">
     			<p>Адрес главного офиса<br>и офлайн магазина:</p>
     			<p class="bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
@@ -159,13 +188,13 @@
   		<div class="main-footer container">
     			<div class="social">
     				<a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a>
-					<!--<a href="#"><img src="img/Twitter.png" alt="Twitter" width="32" height="32"></a>
-					<a href="#"><img src="img/Instagram.png" alt="Instagram" width="32" height="32"></a>
-					<a href="#"><img src="img/Facebook.png" alt="Facebook" width="32" height="32"></a>
-					<a href="#"><img src="img/Vkontakte.png" alt="Vkontakte" width="32" height="32"></a>-->
+  					<a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a>
+  					<!--<a href="#"><img src="img/Twitter.png" alt="Twitter" width="32" height="32"></a>
+  					<a href="#"><img src="img/Instagram.png" alt="Instagram" width="32" height="32"></a>
+  					<a href="#"><img src="img/Facebook.png" alt="Facebook" width="32" height="32"></a>
+  					<a href="#"><img src="img/Vkontakte.png" alt="Vkontakte" width="32" height="32"></a>-->
     			</div>
   			<div class="footer-navigation">
     				<ul>
@@ -181,51 +210,7 @@
     			</div>	
     		</div>	
     	</footer>
-		
-	<div class="modal-wrapper">
-		<div class="modal">
-			<div class="modal-search">
-				<form>
-					<input type="search" name="search" placeholder="Что ищем?"> 
-				</form>
-			</div>
-			<div class="modal-enter">
-				<form>
-					<input type="email" name="email" placeholder="Электронная почта">
-					<input type="password" name="password" placeholder="Пароль">
-					<a href="#" class="btn">Войти</a>
-					<div class="other-enter">
-						<a href="#">Забыли пароль?</a>
-						<a href="#">Новая регистрация</a>
-					</div>
-				</form>
-			</div>
-			<div class="modal-basket">
-				<table>
-					<tr>
-						<td><span class="close">&times</span></td>
-						<td><img src="img/IceCream_item_1.jpg" alt="Изображение товара" width="33" height="33"></td>
-						<td>Пломбир с апельсиновым джемом</td>
-						<td>1,5 кг х <span class="light">200 руб.</span></td>
-						<td>300 руб.</td>
-					</tr>
-					<tr>
-						<td><span class="close">&times</span></td>
-						<td><img src="img/IceCream_item_3.jpg" alt="Изображение товара" width="33" height="33"></td>
-						<td>Клубничный пломбир с присыпкой из белого шоколада</td>
-						<td>1,5 кг х <span class="light">300 руб.</span></td>
-						<td>450 руб.</td>
-					</tr>
-				</table>
-				<div class="totals">
-					<p>Итого: 750 руб.</p>
-					<a class="btn" href="#">Оформить заказ</a>
-				</div>
-			</div>
-		</div>
-	</div>
-		
     </div>
-	<link href="js/script.js" rel="stylesheet">
+	 <script src="js/script.js"></script>
   </body>
 </html>
